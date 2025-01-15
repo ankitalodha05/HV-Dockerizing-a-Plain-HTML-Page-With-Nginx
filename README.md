@@ -145,6 +145,9 @@ CMD ["nginx", "-g", "daemon off;"]
 ### Step 4: Build the Docker Image
 
 1. Open a terminal in your project directory.
+
+-![image](https://github.com/user-attachments/assets/a4fcface-6f54-4fa9-8b1a-fa52eb0c0cb9)
+
 2. Run the following command to build the Docker image:
    ```bash
    docker build -t nginx-html-docker .
