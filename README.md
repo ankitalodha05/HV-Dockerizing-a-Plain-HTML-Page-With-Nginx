@@ -149,12 +149,13 @@ CMD ["nginx", "-g", "daemon off;"]
    ```bash
    docker build -t nginx-html-docker .
    ```
-   - The `-t` flag tags the image with the name `my-nginx-app`.
+   - The `-t` flag tags the image with the name `nginx-html-docker`.
+   
 3. Verify the image:
    ```bash
    docker images
    ```
-   - Ensure `my-nginx-app` is listed in the output.
+   - Ensure `nginx-html-docker` is listed in the output.
 
 ---
 
@@ -162,7 +163,7 @@ CMD ["nginx", "-g", "daemon off;"]
 
 1. Run the container:
    ```bash
-   docker run -d -p 80:80 my-nginx-app
+   docker run -d -p 80:80 nginx-html-docker
    ```
    - The `-d` flag runs the container in detached mode.
    - The `-p` flag maps port 80 of the container to port 80 on your machine.
@@ -180,14 +181,16 @@ CMD ["nginx", "-g", "daemon off;"]
 1. **Create an ECR Repository:**
    - Log in to the AWS Management Console.
    - Navigate to **Amazon ECR** > **Public Repositories**.
-   - Create a repository named `my-nginx-app`.
+   - Create a repository named `nginx-html-docker`.
+-![image](https://github.com/user-attachments/assets/db1b5e9e-2b47-4b97-9d27-3b6524e71f12)
+
 2. **Authenticate Docker to ECR:**
    ```bash
    aws ecr-public get-login-password --region <your-region> | docker login --username AWS --password-stdin public.ecr.aws/<your-account-id>
    ```
 3. **Tag the Image:**
    ```bash
-   docker tag my-nginx-app:latest public.ecr.aws/<your-account-id>/nginx-html-docker:latest
+   docker tag nginx-html-docker:latest public.ecr.aws/<your-account-id>/nginx-html-docker:latest
    ```
 4. **Push the Image:**
    ```bash
@@ -200,8 +203,11 @@ CMD ["nginx", "-g", "daemon off;"]
 
 1. Log in to the AWS Management Console.
 2. Navigate to **Amazon ECR** > **Public Repositories**.
-3. Verify the `my-nginx-app` image is listed.
-4. Share the repository URL, e.g., `public.ecr.aws/<your-account-id>/my-nginx-app:latest`.
+3. Verify the `nginx-html-docker` image is listed.
+4. Share the repository URL, e.g., `public.ecr.aws/<your-account-id>/nginx-html-docker:latest`.
+
+-![image](https://github.com/user-attachments/assets/20b1a4d1-a2b8-41b0-9620-8042e4ec51a5)
+
 
 ---
 
