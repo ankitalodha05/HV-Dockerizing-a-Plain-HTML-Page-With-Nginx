@@ -168,6 +168,10 @@ CMD ["nginx", "-g", "daemon off;"]
    - The `-d` flag runs the container in detached mode.
    - The `-p` flag maps port 80 of the container to port 80 on your machine.
 2. Open a web browser and navigate to `http://localhost` to view the page.
+
+-![image](https://github.com/user-attachments/assets/99d1c915-18c0-451d-99bc-bd175c12f67b)
+
+
 3. Stop the container (if needed):
    ```bash
    docker ps
@@ -207,6 +211,14 @@ CMD ["nginx", "-g", "daemon off;"]
 4. Share the repository URL, e.g., `public.ecr.aws/<your-account-id>/nginx-html-docker:latest`.
 
 -![image](https://github.com/user-attachments/assets/20b1a4d1-a2b8-41b0-9620-8042e4ec51a5)
+
+### step 8: Docker Desktop Overview
+
+-![image](https://github.com/user-attachments/assets/7b70d355-1a67-47bb-9553-f95493e51d33)
+
+-![image](https://github.com/user-attachments/assets/0adaad62-0543-456b-ade4-5c8f3888a7d6)
+
+
 
 
 ---
